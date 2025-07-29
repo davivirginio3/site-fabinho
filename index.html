@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mercadão das Ferramentas</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -95,6 +100,13 @@
       const cardWidth = track.querySelector('.product-card').offsetWidth + 20;
       track.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
     }
+
+    document.querySelectorAll('a, .carousel-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.add('animate-click');
+        setTimeout(() => btn.classList.remove('animate-click'), 200);
+      });
+    });
   </script>
 </body>
 </html>
