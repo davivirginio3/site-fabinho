@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mercadão das Ferramentas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo Mercadão das Ferramentas">
+    <div>
+      <h1>MERCADÃO <span style="color:white;">DAS FERRAMENTAS</span></h1>
+      <h2 style="color: #ffcc00;">FERRAMENTAS, PARAFUSOS, FIXAÇÃO EM GERAL</h2>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#produtos">Produtos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <main>
+    <section id="sobre">
+      <h2 class="section-title">Sobre Nós</h2>
+      <p class="about-text">
+        <strong>O Mercadão das Ferramentas</strong> é muito mais do que uma loja de ferramentas: é um centro especializado em soluções para construção, manutenção, montagem e reforma. Trabalhamos com as melhores marcas do mercado, sempre buscando qualidade, durabilidade e ótimo custo-benefício.
+        <br><br>
+        Nossa equipe está pronta para atender desde profissionais da construção civil e indústrias, até clientes domésticos que buscam segurança e desempenho em seus projetos "faça você mesmo". Temos orgulho em oferecer uma variedade de ferramentas manuais, elétricas, acessórios, parafusos, fixadores, equipamentos de proteção e muito mais.
+        <br><br>
+        Venha conhecer nosso atendimento diferenciado e descubra como podemos ajudar você a realizar mais com as ferramentas certas!
+      </p>
+    </section>
+
+    <section id="produtos">
+      <h2 class="section-title">Produtos</h2>
+
+      <!-- Carrossel de ferramentas -->
+      <div class="carousel">
+        <button class="carousel-btn prev" onclick="scrollCarousel(-1)">‹</button>
+        <div class="carousel-track" id="carousel-track">
+          <div class="product-card">
+            <img src="martelo.png" alt="Martelo">
+            <h3 class="product-name">Martelo</h3>
+            <p class="product-desc">Indispensável para obras e serviços manuais. Resistência e firmeza em cada golpe.</p>
+          </div>
+          <div class="product-card">
+            <img src="furadeira .png" alt="Furadeira">
+            <h3 class="product-name">Furadeira</h3>
+            <p class="product-desc">Potente e precisa, ideal para perfurações em alvenaria, madeira e metal.</p>
+          </div>
+          <div class="product-card">
+            <img src="cahveDeFenda.png" alt="Chave de Fenda">
+            <h3 class="product-name">Chave de Fenda</h3>
+            <p class="product-desc">Ferramenta essencial para apertar e soltar parafusos com eficiência.</p>
+          </div>
+          <div class="product-card">
+            <img src="alicate.png" alt="Alicate Universal">
+            <h3 class="product-name">Alicate Universal</h3>
+            <p class="product-desc">Corte, torça e segure com segurança e versatilidade no seu dia a dia.</p>
+          </div>
+          <div class="product-card">
+            <img src="serramanual.png" alt="Serra Manual">
+            <h3 class="product-name">Serra Manual</h3>
+            <p class="product-desc">Corte preciso em madeira, plásticos e metais leves com esta ferramenta prática.</p>
+          </div>
+        </div>
+        <button class="carousel-btn next" onclick="scrollCarousel(1)">›</button>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h2 class="section-title">Contato</h2>
+      <p style="text-align: center; color: #001f3f;">Entre em contato conosco pelas redes sociais ou WhatsApp:</p>
+      <div class="contact-buttons">
+        <a href="https://www.instagram.com/mercadaodasferramentas" target="_blank" class="btn-contact">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="24">
+          Instagram
+        </a>
+        <a href="https://wa.me/5511989196458" target="_blank" class="btn-contact">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="24">
+          WhatsApp
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2024 Mercadão das Ferramentas - Todos os direitos reservados.
+  </footer>
+
+  <script>
+    function scrollCarousel(direction) {
+      const track = document.getElementById('carousel-track');
+      const cardWidth = track.querySelector('.product-card').offsetWidth + 20;
+      track.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
+ 
